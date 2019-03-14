@@ -1,14 +1,18 @@
 
 
+import { NgModule }         from '@angular/core';
+import { BrowserModule }    from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
 
-import {Component} from '@angular/core';
-
-/**
- * @title Basic menu
- */
-@Component({
-  selector: 'menu-overview-example',
-  templateUrl: 'menu-overview-example.html',
-  styleUrls: ['menu-overview-example.css'],
+@NgModule({
+  imports: [
+    BrowserModule,
+    // import HttpClientModule after BrowserModule.
+    HttpClientModule,
+  ],
+  declarations: [
+    AppComponent,
+  ],
+  bootstrap: [ AppComponent ]
 })
-export class MenuOverviewExample {}
+export class AppModule {}
